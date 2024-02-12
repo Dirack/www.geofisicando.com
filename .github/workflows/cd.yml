@@ -1,0 +1,29 @@
+name:   Delivery of a new version when push a new tag
+
+on:
+        push:
+                tags:
+                        - "v*"
+jobs:
+        release:
+                runs-on: ubuntu-latest
+                steps:
+                        - name: Generate a changelog
+                          run: ./infra/scripts/prepare_release_msg.sh >> ./changelog.md
+                        - name: Upload changelog artifact
+                          uses: actions/upload-artifact@v2
+                          with:
+                                name: changelog
+                                path: ./changelog.md
+                                retention-days: 0
+                        - name: Create Release
+                          id: create_release
+                          uses: actions/create-release@v1
+                          env:
+                                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+                          with:
+                                tag_name: ${{ github.ref }}
+                                release_name: ${{ github.ref }}
+                                body_path: ./changelog.md
+                                draft: true
+                                prerelease: true
