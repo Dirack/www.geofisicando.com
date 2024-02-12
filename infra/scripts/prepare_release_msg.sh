@@ -2,9 +2,11 @@
 #
 # Generate current release message based on active develop branch name
 
+set -xv
 CURRENTVERSION=$(cat $(dirname $0)/../../docs/VERSION.md)
 LATESTVERSION=$(git describe --tags --abbrev=0)
 GITLOG=$(git log "$LATESTVERSION...HEAD" --oneline)
+set +xv
 
 echo "$CURRENTVERSION - [Summary]"
 echo ""
