@@ -1,0 +1,542 @@
+/* Folha de estilo CSS para desktop do site Dirack's Lounge
+
+    Programador: Rodolfo A. C. Neves 15/04/2018
+
+    Atualização: 
+
+		-Revisão dos comentários 05/01/2019
+
+    Email: rodolfo_profissional@hotmail.com
+
+    Layout:
+   
+    Utilizada nas páginas principais do site, um cabeçalho com menu
+    de navegação e uma barra com a imagem do planeta Terra, abaixo 
+    uma coluna principal à esquerda e uma barra lateral à direita, 
+    finalizando no rodapé. 
+
+    Licensa: http://www.dirackslounge.online/licensa.html
+    
+*/
+
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+        box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+nav {
+    background-color: #3B4545;
+    margin: auto;
+    width: 100%;
+    z-index: 1;
+    height: 75px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #a0d3f8;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+}
+
+
+/*< Cabeçalho da página >*/
+
+/* Barra com imagem do planeta Terra */
+#preheader {
+    /*opacity:0.88;*/
+    background-image: url(images/banner.png);
+    background-position: 50% 50%;
+    height: 700px;
+    padding: 0px 20px 10px 50px;
+    margin: 0px;
+}
+
+/*< Menu de navegação >*/
+#menu{
+	background-color: #a0d3f8;
+	text-indent: 0;
+}
+/* ícone do menu */
+#icone-menu {
+	position: absolute;
+	top: 70px;
+	left: 25px;
+	z-index: 0;
+}
+
+/* titulo do site */
+#titulo h1{
+	text-indent: none;
+	opacity:0;
+	font-size:80pt;
+	position: absolute;
+        color: #000000;
+	top: 100px;
+	left: 150px;
+	z-index: 0;
+}
+
+#titulo h3{
+	opacity:0;
+	font-size:25pt;
+	position: absolute;
+        color: #000000;
+	top: 250px;
+	left: 300px;
+	z-index: 0;
+}
+
+#redes ul {
+	opacity:1;
+	list-style-type: none;
+	font-size:25pt;
+	position: fixed;
+        color: #000000;
+	top: 175px;
+	left: -65px;
+	z-index: 0;
+	-webkit-transition: all .6s ease-in;
+}
+
+#redes ul li{
+	width: 40px;
+	height: 40px;
+}
+
+#redes ul li a{
+	border-bottom: none;
+}
+
+#face:hover, #git:hover, #youtube:hover, #plus:hover {
+	width: 45px;
+	height: 40px
+}
+
+#plus-on {
+	opacity:0.9;
+	position: fixed;
+        color: #ffffff;
+	background-color: #000000;
+	top: 0px;
+	left: 0px;
+	width: 1360px;
+	height: 700px;
+	z-index: 0;
+	-webkit-transition: all .6s ease-in;
+}
+
+#plus-on ul {
+	list-style-type: none;
+	position: fixed;
+	top: 200px;
+	left: 400px;
+}
+
+#plus-on ul li {
+	display: inline;
+	margin: 10px;
+}
+
+#plus-on h1{
+	position: fixed;
+	top: 150px;
+	left: 300px;
+	color: #ffffff;
+}
+
+#plus-on p{
+	position: fixed;
+	top: 230px;
+	left: 500px;
+	color: #ffffff;
+}
+
+
+/* Botões de navegação #0F92C6
+nav ul li.selected {
+    background-image: linear-gradient(to bottom, #545454, #000000);
+    border-radius: 5px;
+}*/
+
+/* BOTÃO: Flutuação */
+li.selected:hover{
+    /*background-image: linear-gradient(to bottom, #cf2b4f, #bdb1c2);*/
+    border-radius: 5px;
+}
+
+/* BOTÃO: Flutuação */
+li.atual{
+    background: #bdb1c2;
+}
+
+#geof-logo{
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
+}
+
+#menu-esq{
+	width: 30%;
+	padding-left: 50px;
+	background-color: black;
+	float: left;
+	height: 75px;
+	line-height: 75px;
+}
+
+#menu-esq a{
+	border-bottom: none;
+}
+
+#menu-dir{
+	width:50%;
+	/*background-color: blue;*/
+	float: right;
+	height: 75px;
+	line-height: 75px;
+}
+
+#menu-center{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+	height: 100%;
+	max-width: 960px;
+}
+
+/*nav:hover {
+	opacity: 1;
+}*/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+nav ul li form {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+nav ul li form {
+	background-image: linear-gradient(to bottom, #545454, #000000);
+}
+
+#botao {
+	background-image: linear-gradient(to bottom, #00a000, #00a000);
+	color: white;
+}
+
+#navegacao ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px 20px 5px 20px;
+}
+
+#navegacao ul li{
+        display: inline;
+        padding: 0px 2px 5px 2px;
+        margin: 0px 10px 0px 0px;
+}
+
+#navegacao ul li a:link, #navegacao ul li a:visited {
+    color: white;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+#body-text{
+	height: 3800px;
+}
+
+/*< Coluna principal à esquerda com as postagens e artigos >*/
+#canvas {
+    text-indent: 0px;
+    padding: 10px;
+    margin: 10px 0px 10px 100px;
+    color: #191919;
+    text-align: justify;
+    width: 55%;
+    height: 100%;
+    /*border: 2px solid gray;*/
+}
+
+#postagens h1 a{
+	border-bottom: a;
+} 
+
+/*< Barra lateral à direita com formulário de email e atualizações >*/
+
+#posts {
+    height: 90%;
+    padding: 10px;
+    margin: 10px 55px 0px 0px;
+    width: 25%;
+    float: right;
+    /*border-left: 1px solid gray;*/
+}
+
+#posts iframe{
+	margin-left: 35px;
+}
+
+/*< Formulário Email na página HOME - index.html >*/
+
+fieldset
+  {
+    background-color:#A7C0DC;
+    border-radius: 15px;
+    width: 250px;
+    height:400px;
+    border: 2px solid black;
+  }
+
+/* Flutuação sobre o Botão enviar */  
+.bnt_submit:hover{
+    background-color: #69f;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Botão Enviar */
+.bnt_submit{
+      width:100px;
+      height:25px;
+
+      margin: 0px 0px 100px 0px;
+}
+
+/* Campos do formulário na página index.html (Home) */  
+.campo_nome
+  {
+    left:95px;
+    top:23px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  
+.campo_email
+  {
+    left:95px;
+    margin-top:2px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  
+.msg {
+    top:95px;
+    margin-top:2px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+/**********************************/
+/* ?. Footer
+/**********************************/
+
+.footer-container{
+	height: 100%;
+	margin: 0 auto;
+	max-width: 1260px;
+}
+
+.direitos{
+	height: 50px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#img-rodape{
+	height: 50px;
+	line-height: 70px;
+}
+
+#links-rodape {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.links-rodape__content{
+	height: 100%;
+	padding: 20px;
+}
+
+.links-rodape__title h2{
+	font-size: 2rem;
+}
+
+.links-rodape__list{
+	text-align: center;
+}
+
+.links-rodape__list ul{
+	padding: 0;
+	text-align: center;
+}
+
+.links-rodape__list-imgs li{
+	display: inline;
+}
+
+.links-rodape__content ul li{
+	list-style-type: none;
+	padding-bottom: 5px;
+}
+
+.links-rodape__list ul li a{
+	border-bottom: none;
+}
+
+.links-rodape__content h2{
+	color: black;
+}
+
+/**************************************************************/
+/*< Formatação >*/
+
+/* Alinhar fotos da página contato.html */
+#fotos {
+    text-align:center;
+}
+
+/* fonte dos títulos */
+h1, h2, h3 {
+    font-family: sans-serif;
+    color: #005eff;
+}
+
+/* Fonte dos códigos */
+code {
+    font-size: large;
+}
+
+h1 { 
+    border-bottom: 1px solid-black;
+    text-indent: none;
+}
+
+#video {
+	text-align: center;
+}
+
+/* background do body */
+body {
+    text-align: justify;
+    margin: 0px;
+    font-family: Verdana, sans-serif;
+    padding: 0px;
+	background-color: #f5f5f5;
+}
+
+body p {
+    font-size: large;
+    color: #191919;
+}
+
+#perfil {
+    text-indent: 0px;
+    text-align: center;
+    border: solid black;
+    padding: 0px;
+    margin: 0px;
+}
+
+a:link {
+    color: #053447; 
+    text-decoration: none;
+    border-bottom: thin solid #053447;
+}
+
+/*a:visited {
+    color: #053447;
+    text-decoration: none;
+    border-bottom: thin dotted #053447;
+}*/
+
+#galeria {
+    border-bottom:0px;
+}
+
+/* Flutuação sobre as imagens da classe thumb
+
+    Cada post recebe uma thumbnail da classe thumb, quando o mouse
+    flutua sobre ela aparece borda indicando um link.
+*/
+.thumb:hover{
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+}
+
+.conteinerfoto {
+   float:left;
+   margin: 10px;
+   padding:5px;
+   text-align:center;
+   
+} 
+
+blockquote {
+    background-image: url("images/terminal.png");
+    text-align: left;
+    background-repeat: no-repeat;
+    padding: 50px 0px 10px 10px;
+    color: white;
+    text-indent: 0px;
+}
+
+#busca input{
+	border-radius: 20px;
+}
+
+#logoMobile, #menuMobileImg{
+	display: none;
+}
+
+
