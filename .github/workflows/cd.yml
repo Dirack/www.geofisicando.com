@@ -10,6 +10,8 @@ jobs:
                 steps:
                         - name: Repository checkout
                           uses: actions/checkout@v3
+                          with:
+                                fetch-depth: 0
                         - name: Generate a changelog
                           run: ./infra/scripts/prepare_release_msg.sh >> ./changelog.md
                         - name: Upload changelog artifact
