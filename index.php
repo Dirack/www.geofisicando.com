@@ -37,8 +37,9 @@ include "includes/menu/Menu.php";
 
 <body onload="ajax();"> 
 
-	<nav id="menu">
-		<div id="menu-center">
+	<div id="menu">
+		<nav id="menu-center">
+			<button class="hamburger"></button>
 			<ul id="homebotao">
 				<?php
 					$menu = MENU::buildMenuFromArray(
@@ -53,8 +54,15 @@ include "includes/menu/Menu.php";
 					echo $menu;
 				?>
 			</ul>
-		</div>
-	</nav>
+		</nav>
+	</div>
+
+	<script>
+		const hamburger = document.querySelector(".hamburger");
+		const nav = document.querySelector("#menu-center");
+
+		hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+	</script>
 
 
 <!-- Banner entre o menu de navegação e o corpo da página (Foto do planeta Terra) --> 

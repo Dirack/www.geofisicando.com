@@ -49,7 +49,6 @@
 /**********************************/
 
 nav {
-    background-color: #3B4545;
     margin: auto;
     width: 100%;
     z-index: 1;
@@ -228,16 +227,61 @@ li.atual{
 	justify-content: center;
 	margin: 0 auto;
 	align-items: center;
-	height: 100%;
+	height: 70px;
 	max-width: 960px;
 }
 
-/*nav:hover {
-	opacity: 1;
-}*/
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+  
+.hamburger::after,
+.hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+
+    #homebotao{
+        display: none;
+    }
+  
+    #menu-center.active .hamburger {
+      position: fixed;
+      /*top: 26px;
+      right: 16px;*/
+      border-top-color: transparent;
+    }
+  
+    #menu-center.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    #menu-center.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+  
 
 nav ul {
     list-style-type: none;
+    padding-inline: 0;
 }
 
 nav ul li {
