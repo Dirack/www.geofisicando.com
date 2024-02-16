@@ -1,0 +1,5 @@
+
+# Ignore composer configuration files
+composer.json
+composer.lock
+vendor

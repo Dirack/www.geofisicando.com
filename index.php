@@ -14,16 +14,13 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
 error_reporting(E_ALL);
+
 $ROOT_PATH="./";
 $CSS_PATH="lounge.css";
 $ICON_PATH="icon.ico";
-$MENU_ARRAY=array(
-	"HOME"=>"artigos/index.php",
-	"TUTORIAIS"=>"artigos/index.php",
-	"CURSOS"=>"artigos/index.php",
-	"PROGRAMAS"=>"artigos/index.php",
-	"JOGOS"=>"artigos/index.php"
-);
+
+include "includes/menu/Menu.php";
+
 ?>
 
 <!-- Cabeçalho da página -->
@@ -40,9 +37,32 @@ $MENU_ARRAY=array(
 
 <body onload="ajax();"> 
 
-	<!-- Menu de Navegação principal do site-->
-	<!-- Classe selected são os botões do menu de navegação -->
-	<?php include 'includes/menu.php'; ?>
+	<div id="menu">
+		<nav id="menu-center">
+			<button class="hamburger"></button>
+			<ul id="homebotao">
+				<?php
+					$menu = MENU::buildMenuFromArray(
+						array(
+							"HOME"=>"artigos/index.php",
+							"TUTORIAIS"=>"artigos/index.php",
+							"CURSOS"=>"artigos/index.php",
+							"PROGRAMAS"=>"artigos/index.php",
+							"JOGOS"=>"artigos/index.php"
+						)
+					);
+					echo $menu;
+				?>
+			</ul>
+		</nav>
+	</div>
+
+	<script>
+		const hamburger = document.querySelector(".hamburger");
+		const nav = document.querySelector("#menu-center");
+
+		hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+	</script>
 
 
 <!-- Banner entre o menu de navegação e o corpo da página (Foto do planeta Terra) --> 
