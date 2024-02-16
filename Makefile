@@ -12,7 +12,7 @@ update:
 	composer update
 
 run_test:
-	./vendor/bin/phpunit --bootstrap vendor/autoload.php test/MenuTest.php
+	./vendor/bin/phpunit --bootstrap vendor/autoload.php test/navbar/MenuTest.php
 
 help:
 	@echo "Este Makefile roda os testes da pasta 'test' utilizando o PHP Unit e o composer"
