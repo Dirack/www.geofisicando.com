@@ -4,11 +4,10 @@ use PHPUnit\Framework\TestCase;
 class MenuTest extends TestCase{
     
     public function testSimpleMenuBuildOneItem(){
-        $menu = new Menu();
 
         $menu_simple_array=array("HOME"=>"artigos/index.php",);
 
-        $proc = $menu->buildMenuFromArray($menu_simple_array);
+        $proc = Menu::buildMenuFromArray($menu_simple_array);
 
         $this->assertEquals(
             '<li class="selected"><a href="artigos/index.php">HOME</a></li>',
@@ -17,7 +16,6 @@ class MenuTest extends TestCase{
     }
 
     public function testSimpleMenuBuildFiveItems(){
-        $menu = new Menu();
 
         $menu_array=array(
             "HOME"=>"artigos/index.php",
@@ -27,7 +25,7 @@ class MenuTest extends TestCase{
             "JOGOS"=>"artigos/index.php"
         );
 
-        $proc = $menu->buildMenuFromArray($menu_array);
+        $proc = Menu::buildMenuFromArray($menu_array);
 
         $this->assertEquals(
             '<li class="selected"><a href="artigos/index.php">HOME</a></li>'

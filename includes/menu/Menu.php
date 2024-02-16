@@ -1,7 +1,7 @@
 <?php
 class Menu{
 
-    public function buildMenuFromArray(&$MENU_ARRAY){
+    public static function buildMenuFromArray($MENU_ARRAY){
         $menu='';
         foreach($MENU_ARRAY as $key => $value){
             $menu = $menu.'<li class="selected">';
