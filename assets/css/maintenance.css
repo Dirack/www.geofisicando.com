@@ -23,13 +23,14 @@ main{
     align-items: center;
 }
 
+
 h1{
     font-weight: 200;
 }
 
 h2{
     font-size: 40px;
-    line-height: 20px;
+    line-height: 40px;
     font-family: poppinsmedium;
 }
 
@@ -43,4 +44,39 @@ a{
 
 .img-perfil img{
     border-radius: 50%;
+}
+
+@media(max-width: 1170px){
+    .img-perfil img{
+        width: 50%;
+    }
+
+    .img-perfil{
+        display: flex;
+        justify-content: center;
+    }
+
+    aside{
+        padding: 10px;
+    }
+
+    main{
+        display: block;
+    }
+
+    .title{
+        text-align: center;
+    }
+}
+
+@media(max-width: 630px){
+    .img-perfil img{
+        width: 60%;
+    }
+}
+
+@media(max-width: 1170px){
+    main{
+        flex-direction: column;
+    }
 }

@@ -37,6 +37,10 @@ include "includes/menu/Menu.php";
 
 <body onload="ajax();"> 
 
+<script>
+	window.location.href="./manutencao.html";
+</script>
+
 	<div id="menu">
 		<nav id="menu-center">
 			<button class="hamburger"></button>
