@@ -38,7 +38,7 @@ include "includes/menu/Menu.php";
 <body onload="ajax();"> 
 
 <script>
-	window.location.href="./manutencao.html";
+	window.location.href="./blog";
 </script>
 
 	<div id="menu">
