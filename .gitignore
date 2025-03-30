@@ -1,4 +1,4 @@
-
+blog/wp-config.php
 # Ignore composer configuration files
 composer.json
 composer.lock
