@@ -10,6 +10,13 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+
+    - name: Setup
+      run: |
+          cd blog && cp wp-config-sample.php wp-config.php
+          sed -i "s/database_name_here/${{ secrets.DB_NAME }}/" wp-config.php
+          sed -i "s/username_here/${{ secrets.DB_USER }}/" wp-config.php
+          sed -i "s/password_here/${{ secrets.DB_PASSWORD }}/" wp-config.php
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
